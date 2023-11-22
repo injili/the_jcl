@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, url_for
 
 app = Flask(__name__)
 
@@ -15,7 +15,7 @@ def product():
     """
     The function to the product page
     """
-    return (render_template('product.html'))
+    return (render_template('product.html'))
 
 @app.route('/contacts', strict_slashes=False)
 def contact():
@@ -26,4 +26,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=888)
+    app.run(host="0.0.0.0", port=888, debug=True)
