@@ -31,7 +31,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <a style="text-decoration: none;" href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a style="text-decoration: none;" href="{{ url_for('home') }}#hero" class="logo d-flex align-items-center me-auto me-xl-0">
         <h1>JCL Copiers</h1>
         <span>.</span>
       </a>
@@ -41,7 +41,7 @@
         <ul>
           <li><a href="{{ url_for('home') }}#hero" class="active">Home</a></li>
           <li><a href="{{ url_for('home') }}#about">About</a></li>
-          <li><a href="{{ url_for('home') }}#pricing">Products</a></li>
+          <li><a href="{{ url_for('home') }}#pricing">Product</a></li>
           <li><a href="{{ url_for('home') }}#contact">Contact</a></li>
         </ul>
 
@@ -56,13 +56,13 @@
     <!-- Hero Section - Home Page -->
     <section id="hero" class="hero">
 
-      <img src="{{ url_for('static', filename='images/hero-bg.jpg') }}" alt="" data-aos="fade-in" data-aos-delay="400">
+      <img class="thebigbg" src="{{ url_for('static', filename='images/hero-bg.jpg') }}" alt="" data-aos="fade-in" data-aos-delay="400">
 
       <div class="container">
         <div class="row flex-wrap">
           <div class="container col-lg">
-            <h2 data-aos="fade-up" data-aos-delay="600">Welcome to Our Website</h2>
-            <p data-aos="fade-up" data-aos-delay="600">We are team of talented designers making websites with Bootstrap</p>
+            <h2 data-aos="fade-up" data-aos-delay="600">Welcome to JCL COPIERS</h2>
+            <p data-aos="fade-up" data-aos-delay="600">We take pride in providing top-tier paper products designed to meet all your needs.</p>
           </div>
           <div class="container col-lg">
             <img style="width: 350px; height: 500px;" src="{{ url_for('static', filename='images/ream2.png') }}" alt="" data-aos="fade-down" data-aos-delay="500">
@@ -107,8 +107,10 @@
             <div class="col-xl-5 content">
               <h3>About Us</h3>
               <h2>Professional Print Paper</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-              <a href="products.html" class="read-more" style="text-decoration: none;"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+              <p>At JCL COPIERS, we're purveyors of quality and champions of sustainability. Our journey began with a commitment to deliver paper that not only meets but exceeds your expectations.
+
+                Every sheet tells a story of precision and care. We believe in crafting a product that reflects our dedication to environmental responsibility without compromising on quality.</p>
+              <!--a href="products.html" class="read-more" style="text-decoration: none;"><span>Read More</span><i class="bi bi-arrow-right"></i></a-->
             </div>
   
             <div class="col-xl-7">
@@ -117,32 +119,32 @@
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                   <div class="icon-box">
                     <i class="bi bi-buildings"></i>
-                    <h3>Eius provident</h3>
-                    <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+                    <h3>Innovation</h3>
+                    <p>Whether for your home, office, or creative projects, our paper is designed to deliver exceptional performance. We strive to continually evolve, providing you with cutting-edge solutions.</p>
                   </div>
                 </div> <!-- End Icon Box -->
   
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                   <div class="icon-box">
-                    <i class="bi bi-clipboard-pulse"></i>
-                    <h3>Rerum aperiam</h3>
-                    <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
+                    <i class="bi bi-flower1"></i>
+                    <h3>Environmental</h3>
+                    <p> Our paper is sourced from responsibly managed forests, promoting the preservation of our planet's natural resources. You're making a choice for a greener future.</p>
                   </div>
                 </div> <!-- End Icon Box -->
   
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                   <div class="icon-box">
                     <i class="bi bi-command"></i>
-                    <h3>Veniam omnis</h3>
-                    <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
+                    <h3>Quality</h3>
+                    <p> We take pride in our unwavering commitment to quality. Each sheet of paper is a testament to our dedication to providing you with a superior paper product.</p>
                   </div>
                 </div> <!-- End Icon Box -->
   
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                   <div class="icon-box">
-                    <i class="bi bi-graph-up-arrow"></i>
-                    <h3>Delares sapiente</h3>
-                    <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
+                    <i class="bi bi-balloon-heart"></i>
+                    <h3>Customer-Centric</h3>
+                    <p>We believe in building lasting relationships with our customers by prioritizing your needs.</p>
                   </div>
                 </div> <!-- End Icon Box -->
   
@@ -167,48 +169,19 @@
   
           <div class="row continer g-4">
   
-            <div class=" container-fluid align-items-center col-lg-4">
+            <div class=" container-fluid align-items-center text-center col-lg-4">
               <div class="pricing-item">
-                <h3>Paper type A</h3>
+                <h3>Multi-Purpose A4 Printing Paper</h3>
                 <img src="{{ url_for('static', filename='images/ream2.png') }}">
                 <h4>80<span> gsm</span></h4>
                 <ul>
-                  <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                  <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                  <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
+                  <li><span>.  High opacity</span></li>
+                  <li><span>.  High whiteness </span></li>
+                  <li><span>.  Thick for duplex priniting</span></li>
                 </ul>
-                <div class="text-center"><a href="#" class="buy-btn" style="text-decoration: none;">Buy Now</a></div>
+                <div class="text-center"><a href="{{ url_for('product') }}" class="read-more buy-btn" style="text-decoration: none;"><span>View Product</span></a></div>
               </div>
-            </div><!-- End Pricing Item -->
-  
-            <div class="container-fluid col-lg-4">
-              <div class="pricing-item">
-                <h3>Paper Type B</h3>
-                <img src="{{ url_for('static', filename='images/ream2.png') }}">
-                <h4>70<span> gsm</span></h4>
-                <ul>
-                  <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                  <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                  <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                </ul>
-                <div class="text-center"><a href="#" class="buy-btn" style="text-decoration: none;">Buy Now</a></div>
-              </div>
-            </div><!-- End Pricing Item -->
-  
-            <div class="container-fluid col-lg-4">
-              <div class="pricing-item">
-                <h3>Paper Type C</h3>
-                <img src="{{ url_for('static', filename='images/ream2.png') }}">
-                <h4>65<span> gsm</span></h4>
-                <ul>
-                  <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                  <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                  <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                </ul>
-                <div class="text-center"><a href="#" class="buy-btn" style="text-decoration: none;">Buy Now</a></div>
-              </div>
-            </div><!-- End Pricing Item -->
-  
+            </div>
           </div>
   
         </div>
@@ -225,9 +198,9 @@
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div class="content px-xl-5">
                 <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                </p>
+                <p>We understand that you may have questions about our 80gsm ream paper and our services. Below, we've compiled answers to the most common inquiries to provide you with a quick and comprehensive resource.
+                  <br>
+                  If you can't find the information you're looking for, feel free to reach out to our dedicated customer support team through our contacts or call us at +245123456789. We're here to assist you on your journey to discovering the excellence of our paper products.</p>
               </div>
             </div>
   
@@ -235,41 +208,33 @@
   
               <div class="faq-container">
                 <div class="faq-item faq-active">
-                  <h3><span class="num">1.</span> <span>Non consectetur a erat nam at lectus urna duis?</span></h3>
+                  <h3><span class="num">1.</span> <span>What makes your 80gsm ream paper stand out from others on the market?</span></h3>
                   <div class="faq-content">
-                    <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                    <p>Our 80gsm ream paper stands out due to its exceptional quality and commitment to sustainability. We prioritize precision in manufacturing, ensuring a smooth texture and excellent print quality. Moreover, our paper is sourced from responsibly managed forests, reflecting our dedication to environmental responsibility.</p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
                 </div><!-- End Faq item-->
   
                 <div class="faq-item">
-                  <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</span></h3>
+                  <h3><span class="num">2.</span> <span> Can I use your ream paper for both home and office printing?</span></h3>
                   <div class="faq-content">
-                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                    <p>Certainly! Our 80gsm ream paper is designed for versatility. Whether you need it for everyday printing at home, professional documents at the office, or creative projects, our paper delivers consistent quality. It's a reliable choice for a wide range of printing needs.</p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
                 </div><!-- End Faq item-->
   
                 <div class="faq-item">
-                  <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span></h3>
+                  <h3><span class="num">3.</span> <span>Do you offer bulk or customized orders for businesses?</span></h3>
                   <div class="faq-content">
-                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                    <p>Yes, we understand the unique requirements of businesses. We offer bulk orders. Get in touch with our customer support team, and we'll work with you to fulfill your specific needs, ensuring a seamless ordering process.</p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
                 </div><!-- End Faq item-->
   
                 <div class="faq-item">
-                  <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span></h3>
+                  <h3><span class="num">4.</span> <span>How can I contact customer support for inquiries or assistance?</span></h3>
                   <div class="faq-content">
-                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                  </div>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
-                </div><!-- End Faq item-->
-  
-                <div class="faq-item">
-                  <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</span></h3>
-                  <div class="faq-content">
-                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                    <p>We're here to assist you. You can reach our dedicated customer support team through our contacts, where you can fill out a form with your inquiry. Alternatively, you can call us directly at +254123456789. We strive to provide prompt and helpful assistance to ensure your experience with us is exceptional.</p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
                 </div><!-- End Faq item-->
@@ -292,9 +257,9 @@
           <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-xl-10">
               <div class="text-center">
-                <h3>Make an order</h3>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a class="cta-btn" href="#">Make an order</a>
+                <h3>Elevate Your Printing Experience with JCL COPIERS</h3>
+                <p> Whether you're interested in browsing our products, requesting a sample to witness the quality firsthand, staying updated with exclusive promotions through our newsletter, or seeking personalized assistance from our knowledgeable team, JCL COPIERS is here to meet your needs. </p>
+                <a class="cta-btn" href="#">Browse Our Product</a>
               </div>
             </div>
           </div>
@@ -307,8 +272,8 @@
   
         <!--  Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p style="color: #043c4c;">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+          <h2>Contact & Location</h2>
+          <p style="color: #043c4c;">Get in touch with us</p>
         </div><!-- End Section Title -->
   
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -351,7 +316,7 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="500">
                     <i class="bi bi-clock"></i>
                     <h3>Open Hours</h3>
-                    <p>Monday - Friday</p>
+                    <p>Monday - Saturday</p>
                     <p>9:00AM - 05:00PM</p>
                   </div>
                 </div><!-- End Info Item -->
@@ -375,9 +340,8 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-about">
             <a href="{{ url_for('home') }}" class="logo d-flex align-items-center" style="text-decoration: none;">
-              <span style="color: #fff;">jcl copiers</span>
+              <span style="color: #fff;">JCL COPIERS</span>
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
             <div class="social-links d-flex mt-4">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -442,29 +406,6 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://unpkg.com/php-email-form@3.2.1/validate.js"></script>
-    <!--script>
-      // purecounter initialization
-      new PureCounter(".purecounter", {
-        start: 0,
-        end: 100,
-        duration: 2,
-      });
-    </script>
-    <script type="text/javascript">
-        var nav = document.querySelector('nav');
-  
-        window.addEventListener('scroll', function () {
-          if (window.pageYOffset > 300) {
-            nav.style.transition = 'background-color 0.5s ease-in-out';
-            nav.style.backgroundColor = 'rgb(4,60,76)';
-            nav.classList.add('shadow');
-          } else {
-            nav.style.transition = 'background-color 0.5s ease-in-out';
-            nav.style.backgroundColor = '';
-            nav.classList.remove('shadow');
-          }
-        });
-    </script-->
 
     <!-- Template Main JS File -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

@@ -11,6 +11,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -57,7 +58,7 @@
           cursor: pointer;
         }
         .sproduct {
-          padding-bottom: 0px;
+          padding-bottom: 100px;
           padding-top: 100px;
         }
         .sproduct input {
@@ -180,7 +181,6 @@
           color: rgb(255, 208, 0);
         }
     </style>
-  <link href="main.css" rel="stylesheet">
 </head>
 
 <body class="blog-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -188,7 +188,7 @@
   <!-- ======= Header ======= -->
   <nav class="navbar navbar-expand-sm fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Jcl copiers</a>
+        <a class="navbar-brand" href="{{ url_for('home') }}#hero">Jcl copiers</a>
         <!-- Toggle button -->
         <button
         class="navbar-toggler"
@@ -205,44 +205,39 @@
             <!-- Center links -->
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
+                  <a class="nav-link" href="{{ url_for('home') }}#about">About</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="">Contacts</a>
+                  <a class="nav-link" href="{{ url_for('home') }}#pricing">Products</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="">Products</a>
+                  <a class="nav-link" href="{{ url_for('home') }}#contact">Contacts</a>
               </li>
-          </ul>
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <button class="btn btn-outline-success border-0"><a class="nav-link"><i class="bi bi-cart2"></i></a></button>
-            </li>
           </ul>
         </div>
     </div>
   </nav>
 
   <main id="main">
-    <section data-aos="fade-up" class="container sproduct">
+    <section data-aos="fade-down" class="container sproduct">
       <div class="row">
         <div class="col-lg-5 col-md-12 col-12">
-          <img class="img-fluid pb-1" src="img/ream2.png" alt="#" id="MainImg">
+          <img class="img-fluid pb-1" src="{{ url_for('static', filename='images/ream2.png') }}" alt="#" id="MainImg">
           <div class="small-img-group">
             <div class="small-img-col">
-              <img src="img/ream1.png" width="100px" class="small-img">
+              <img src="{{ url_for('static', filename='images/ream1.png') }}" width="100px" class="small-img">
             </div>
             <div class="small-img-col">
-              <img src="img/ream2.png" width="100px" class="small-img">
+              <img src="{{ url_for('static', filename='images/ream2.png') }}" width="100px" class="small-img">
             </div>
             <div class="small-img-col">
-              <img src="img/ream1.png" width="100px" class="small-img">
+              <img src="{{ url_for('static', filename='images/ream1.png') }}" width="100px" class="small-img">
             </div>
             <div class="small-img-col">
-              <img src="img/ream2.png" width="100px" class="small-img">
+              <img src="{{ url_for('static', filename='images/ream2.png') }}" width="100px" class="small-img">
             </div>
           </div>
         </div>
@@ -251,10 +246,11 @@
             <p>Home / Products / 80gsm</p>
             <h2 class="py-2">80gsm A4 Multipurpose Quality Paper</h2>
             <h3>PRODUCT DETAILS</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-              ullamco
+            <p>A testament to quality and versatility. 
+              Crafted with precision, each sheet boasts a smooth texture that ensures
+               exceptional print quality for all your documents. 
+               Ideal for both home and office use, our 80gsm paper delivers 
+               reliable performance in various printing applications. 
             </p>
             <p>
               <ul>
@@ -266,69 +262,10 @@
               </ul>
               
             </p>
-            <h3>Ksh. 750</h3>
-            <input type="number" value="1">
-            <br>
-            <button class="buy-btn">ADD TO CART</button>
           </div>
         </div>
       </div>
     </section>
-    <section id="blog" class="blog">
-      <div class="container text-center py-5">
-        <h3>OTHER PRODUCTS</h3>
-        <hr>
-        <p>Here are other products you may be interested in</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 posts-list">
-
-          <div class="col-xl-4 col-lg-6">
-            <article>
-
-              <div class="hover-zoom post-img">
-                <img src="img/ream2.png" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">65gsm</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">65gsm A4 Multipurpose Quality Papers</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-lg-6">
-            <article>
-
-              <div class="post-img">
-                <img src="img/ream2.png" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">70gsm</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">70gsm A4 Multipurpose Quality Paper</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-        </div><!-- End blog posts list -->
-      </div>
-
-    </section><!-- End Blog Section -->
-
   </main>
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -336,10 +273,9 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center" style="text-decoration: none;">
-            <span style="color: #fff;">jcl copiers</span>
+          <a href="{{ url_for('home') }}" class="logo d-flex align-items-center" style="text-decoration: none;">
+            <span style="color: #fff;">JCL COPIERS</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -351,20 +287,16 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="{{ url_for('home') }}#hero">Home</a></li>
+            <li><a href="{{ url_for('home') }}#about">About us</a></li>
+            <li><a href="{{ url_for('home') }}#pricing">Product</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Products</h4>
+          <h4>Our Product</h4>
           <ul>
-            <li><a href="#">Paper Type A</a></li>
-            <li><a href="#">Paper Type B</a></li>
-            <li><a href="#">Paper Type C</a></li>
+            <li><a href="{{ url_for('product') }}">80gsm paper</a></li>
           </ul>
         </div>
 
@@ -435,7 +367,7 @@
   </script>
 
   <!-- Template Main JS File -->
-  <script src="main.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
