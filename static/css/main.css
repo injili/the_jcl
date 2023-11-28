@@ -1028,8 +1028,8 @@
   
   .pricing .pricing-item img {
     display: flex !important;
-    width: 380px;
-    height: 410px;
+    width: 280px;
+    height: 425px;
     align-items: center !important;
     justify-content:flex-start !important;
     transition: 0.3s;
