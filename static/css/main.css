@@ -835,7 +835,7 @@
   
   .hero h2 {
     color: var(--contrast-color);
-    margin: 200px 0 0 0;
+    margin: 20vh 0 0 0;
     font-size: 44px;
     font-weight: 700;
   }
