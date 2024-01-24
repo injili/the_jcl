@@ -8,10 +8,10 @@
   :root {
     --background-color: #ffffff;
     --background-color-rgb: 255, 255, 255;
-    --default-color: #6dbe22;
+    --default-color: #e6c496;
     --default-color-rgb: 33, 37, 41;
     --primary-color: #003b4d;
-    --primary-color-rgb: 110,190,35;
+    --primary-color-rgb: 230,196,150;
     --secondary-color: #212529;
     --secondary-color-rgb: 50, 53, 58;
     --contrast-color: #ffffff;
@@ -209,7 +209,7 @@
     --background-color: #ffffff;
     --secondary-color: #444444;
     --nav-color: #444444;
-    --nav-hover-color: #6dbe22;
+    --nav-hover-color: #e6c496;
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -240,7 +240,7 @@
     --background-color: #ffffff;
     --secondary-color: #444444;
     --nav-color: #444444;
-    --nav-hover-color: #6dbe22;
+    --nav-hover-color: #e6c496;
   }
   
   .navmenu a {
@@ -970,7 +970,7 @@
     font-size: 32px;
     line-height: 0;
     transition: all 0.4s ease-out 0s;
-    background-color: rgba(var(--primary-color-rgb), 0.05);
+    background-color: rgba(var(--primary-color-rgb), 0.09);
     color: var(--primary-color);
   }
   
